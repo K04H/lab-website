@@ -63,3 +63,19 @@ ul {
   margin: 0;
   color: #444;
 }
+
+a {
+  color: #0055aa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a {
+  color: #0055aa;
+}
+
+a:hover {
+  text-decoration: underline;
+}
