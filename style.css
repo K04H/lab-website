@@ -1,21 +1,34 @@
 /* ===== Theme ===== */
 :root{
-  --bg: #f6f7fb;
-  --paper: #ffffff;
+  --bg: #f6f7fb;              /* ベース背景 */
+  --paper: #ffffff;           /* 本文の紙 */
   --text: #1f2328;
   --muted: #57606a;
   --line: #e5e7eb;
   --link: #0b5fff;
+
+  /* テクスチャの濃さ（0.02〜0.06くらいで調整） */
+  --tex1: rgba(0,0,0,0.035);
+  --tex2: rgba(0,0,0,0.02);
 }
 
-/* ===== Base ===== */
+/* 背景（軽量テクスチャ） */
 body{
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.8;
   margin: 0;
   color: var(--text);
-  background: var(--bg);
+
+  /* 画像ファイル不要：線の重なりで紙っぽさを作る */
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(0deg,  var(--tex2) 0 1px, transparent 1px 24px),
+    repeating-linear-gradient(90deg, var(--tex1) 0 1px, transparent 1px 28px),
+    radial-gradient(1200px 600px at 20% 0%, rgba(255,255,255,0.75), transparent 60%),
+    radial-gradient(900px 500px at 90% 10%, rgba(255,255,255,0.55), transparent 55%);
+  background-attachment: fixed;
 }
+
 
 /* ページを中央寄せして“紙”っぽくする */
 main{
