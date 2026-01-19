@@ -47,12 +47,12 @@ ul {
 }
 
 .research-item img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
+  max-width: 260px;   /* 横幅の上限 */
+  height: auto;       /* 縦横比を維持 */
   margin-right: 20px;
   border: 1px solid #ccc;
 }
+
 
 .research-text h3 {
   margin: 0 0 0.3em 0;
