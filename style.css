@@ -38,3 +38,28 @@ nav a:hover {
 ul {
   margin-left: 1.5em;
 }
+
+/* 研究テーマカード */
+.research-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.research-item img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+}
+
+.research-text h3 {
+  margin: 0 0 0.3em 0;
+  font-size: 1.2em;
+}
+
+.research-text p {
+  margin: 0;
+  color: #444;
+}
