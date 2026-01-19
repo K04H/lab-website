@@ -1,0 +1,40 @@
+/* 全体設定 */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.8;
+  margin: 40px;
+  color: #222;
+  background-color: #ffffff;
+}
+
+/* 見出し */
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+/* ナビゲーション */
+nav {
+  margin-bottom: 2em;
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #0055aa;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* 箇条書き */
+ul {
+  margin-left: 1.5em;
+}
