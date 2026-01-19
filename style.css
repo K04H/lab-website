@@ -1,81 +1,124 @@
-/* 全体設定 */
-body {
+/* ===== Theme ===== */
+:root{
+  --bg: #f6f7fb;
+  --paper: #ffffff;
+  --text: #1f2328;
+  --muted: #57606a;
+  --line: #e5e7eb;
+  --link: #0b5fff;
+}
+
+/* ===== Base ===== */
+body{
   font-family: "Helvetica Neue", Arial, sans-serif;
   line-height: 1.8;
-  margin: 40px;
-  color: #222;
-  background-color: #ffffff;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ページを中央寄せして“紙”っぽくする */
+main{
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 32px 36px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
 }
 
 /* 見出し */
-h1 {
+h1{
   font-size: 2.2em;
   border-bottom: 2px solid #333;
   padding-bottom: 0.3em;
+  margin-top: 0;
 }
 
-h2 {
+h2{
   margin-top: 2em;
   font-size: 1.5em;
 }
 
 /* ナビゲーション */
-nav {
-  margin-bottom: 2em;
+nav{
+  display: flex;
+  gap: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
 }
 
-nav a {
-  margin-right: 20px;
+nav a{
   text-decoration: none;
-  color: #0055aa;
+  color: var(--link);
+  font-weight: 600;
 }
 
-nav a:hover {
+nav a:hover{
+  text-decoration: underline;
+}
+
+/* リンク（本文） */
+a{
+  color: var(--link);
+}
+
+a:hover{
   text-decoration: underline;
 }
 
 /* 箇条書き */
-ul {
+ul{
   margin-left: 1.5em;
 }
 
 /* 研究テーマカード */
-.research-item {
+.research-item{
   display: flex;
-  align-items: center;
-  margin-bottom: 2em;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 18px;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
 }
 
-.research-item img {
-  max-width: 260px;   /* 横幅の上限 */
-  height: auto;       /* 縦横比を維持 */
-  margin-right: 20px;
-  border: 1px solid #ccc;
+.research-item img{
+  width: 240px;      /* 表示サイズを固定して安定させる */
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
 }
 
-
-.research-text h3 {
-  margin: 0 0 0.3em 0;
-  font-size: 1.2em;
+.research-text h3{
+  margin: 0 0 6px 0;
+  font-size: 1.15em;
 }
 
-.research-text p {
+.research-text p{
   margin: 0;
-  color: #444;
+  color: var(--muted);
 }
 
-a {
-  color: #0055aa;
+/* 区切り線 */
+hr{
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 28px 0;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-a {
-  color: #0055aa;
-}
-
-a:hover {
-  text-decoration: underline;
+/* スマホ対応（崩れ防止） */
+@media (max-width: 700px){
+  main{
+    margin: 18px 10px;
+    padding: 18px 16px;
+  }
+  .research-item{
+    flex-direction: column;
+  }
+  .research-item img{
+    width: 100%;
+  }
 }
